@@ -18,7 +18,7 @@ services:
     image: mongo:7
     ports:
       - "27017:27017"
-    command: ["--quiet", "--logpath", "/dev/null"]
+    command: ["--quiet"]
     volumes:
       - mongo_data:/data/db
     healthcheck:

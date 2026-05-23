@@ -7,7 +7,7 @@ const { normalizeType } = require("../utils/typeMapper");
 
 const VALID_TYPES = ["BUY", "SELL", "TRANSFER_IN", "TRANSFER_OUT"];
 
-function validateRow(row, rowNumber, source, seenIds) {
+function validateRow(row, rowNumber, seenIds) {
   const reasons = [];
 
   // Duplicate transaction id within same source
@@ -72,7 +72,7 @@ async function ingestFile(filePath, source, runId) {
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i];
     const rowNumber = i + 2; // +2 accounts for 1-based index and header row
-    const reasons = validateRow(row, rowNumber, source, seenIds);
+    const reasons = validateRow(row, rowNumber, seenIds);
 
     if (reasons.length > 0) {
       qualityIssues.push({

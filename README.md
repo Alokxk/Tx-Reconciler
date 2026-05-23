@@ -1,7 +1,7 @@
 # Tx-Reconciler
 
 ![Node.js](https://img.shields.io/badge/Node.js-24.x-339933?logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express&logoColor=white)
+![Express](https://img.shields.io/badge/Express-5.x-000000?logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-7.x-47A248?logo=mongodb&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 
@@ -38,7 +38,7 @@ Results are stored in MongoDB under a unique `runId` returned by the `/reconcile
 ### With Docker (recommended)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Tx-Reconciler.git
+git clone git@github.com:Alokxk/Tx-Reconciler.git
 cd Tx-Reconciler
 docker compose up --build
 ```
@@ -50,7 +50,7 @@ The API will be available at `http://localhost:3000`.
 **Prerequisites:** Node.js v18+, a running MongoDB instance.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Tx-Reconciler.git
+git clone git@github.com:Alokxk/Tx-Reconciler.git
 cd Tx-Reconciler
 npm install
 cp .env.example .env
@@ -172,6 +172,7 @@ src/
   services/       # ingestion, matching algorithm, reporter
   utils/          # asset normaliser, type mapper
   routes/         # Express route handlers
+assets/           # architecture diagram
 data/             # input CSV files
 server.js         # entry point
 docker-compose.yml
