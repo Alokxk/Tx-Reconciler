@@ -146,6 +146,11 @@ Returns all rows that failed validation during ingestion, with per-row reasons.
 ```
 
 
+### `GET /report/:runId/export`
+
+Downloads the full reconciliation report as a CSV file. Each row contains the category (`MATCHED`, `CONFLICTING`, `UNMATCHED_USER`, `UNMATCHED_EXCHANGE`), both sides of the transaction where available, and the reason for categorisation.
+
+
 ### `GET /runs`
 
 Returns a list of all reconciliation runs with their summaries, sorted by most recent first.
